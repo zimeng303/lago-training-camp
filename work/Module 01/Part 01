@@ -24,5 +24,21 @@ let isLastInStock = function (cars) {
     return fp.flowRight(fp.prop('in_stock'), fp.last)(cars)
 }
 
+### 2.
+let getFirstInName = function (cars) {
+    return fp.flowRight(fp.prop('name'), fp.first)(cars)
+}
+
+### 3.
+let averageDollarValue = function (cars) {
+    return fp.flowRight(_average, fp.map('dollar_value'))(cars)
+}
+
+### 4.
+let sanitizeNames = function (cars) {
+    return fp.flowRight(_underscore, fp.map(fp.toLower))(cars)
+}
+sanitizeNames(["Hello World"]) // ["hello_world"]
+
 # 手写实现 Promise 源码
 
