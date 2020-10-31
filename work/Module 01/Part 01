@@ -19,5 +19,10 @@ p('hello ').then(value => p(value + 'lagou '))
 
 ## 四个练习
 
+### 1. 
+let isLastInStock = function (cars) {
+    return fp.flowRight(fp.prop('in_stock'), fp.last)(cars)
+}
+
 # 手写实现 Promise 源码
 
