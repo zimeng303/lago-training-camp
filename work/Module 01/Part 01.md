@@ -1,16 +1,16 @@
-# 简答题
-## JS异步编程
+# 一、简答题
+1、JS异步编程
    Js的执行环境是单线程的。所谓单线程就是一次只能执行一个任务，多个任务就要排队，当前面的任务响应时间过长导致卡死时，会影响后面的任务不能执行。
    JS的异步编程，可以很好的改善单线程带来的问题，它使每一个任务有一个或多个回调函数（callback），当前一个任务结束后，
                 此时不会去执行后一个任务，而是执行回调函数，而后一个任务则是不等前一个任务结束就会执行。
                 这样可以很好的解决因前面业务时间过长，而后面任务不能执行的问题。
-## EventLoop、消息队列
+2、EventLoop、消息队列
    1、所有同步任务都在主线程（由JS引擎维护，用来负责解释和执行JavaScript代码）上执行，形成一个执行栈（execution context stack）。
    2、主线程之外，还存在一个"消息队列"（queue）（特点：先进先出）。只要异步任务有了运行结果，就在"消息队列"之中放置一个事件。
    3、一旦"执行栈"中的所有同步任务执行完毕，系统就会读取"消息队列"，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。
    4、主线程不断重复上面的第三步。 
 
-## 什么是宏任务，什么是微任务
+3、什么是宏任务，什么是微任务
 
 宏任务是由宿主(Node、浏览器)发起的，而微任务由JavaScript自身(JS引擎)发起。
 宏任务主要是指script 中的代码块、setTimeout()、setInterval()、注册事件等；
@@ -37,7 +37,7 @@ p('hello ').then(value => p(value + 'lagou '))
            .then(value => console.log(value))
 ```
 
-## 四个练习
+## 二、四个lodash练习
 
 ### 1. 
 ```c
@@ -67,7 +67,44 @@ let sanitizeNames = function (cars) {
 }
 sanitizeNames(["Hello World"]) // ["hello_world"]
 ```
-# 手写实现 Promise 源码
+
+# 三、四个Functor练习
+
+### 1.
+let maybe = Maybe.of([5, 6, 1])
+let ex1 = (num) => {
+    return maybe.map(x => fp.map(value => fp.add(value, num), x))
+} 
+ex1(2)
+
+### 2.
+let xs = Container.of(['do', 'ray', 'me', 'fa', 'so', 'la', 'ti', 'do'])
+let ex2 = () => {
+    return xs.map(x => fp.first(x))
+}
+ex2()
+
+### 3.
+let safeProp = fp.curry(function (x, o) {
+    return Maybe.of(o[x])
+}) 
+let user = { id: 2, name: 'Albert' }
+let ex3 = () => {
+    return safeProp('name', user).map(x => fp.first(x))
+}
+ex3()
+
+### 4.
+let ex4 = function (n) {
+    // if (n) {
+    //     return parseInt(n)
+    // }
+    return Maybe.of(n).map(x => parseInt(n))
+}
+ex4(null)
+
+
+# 四、手写实现 Promise 源码
 ```c
 // 定义promise的三种状态
 const PENDING = 'pending'; // 等待
@@ -282,7 +319,5 @@ module.exports = Promise;
 ```
 
 具体的详细分析参见[JavaScript异步编程【中】 -- Promise 详细解析](https://blog.csdn.net/zimeng303/article/details/109360305)
-
-
 
 
