@@ -1,4 +1,4 @@
-# 一、简答题
+# 简答题
 1、JS异步编程
    Js的执行环境是单线程的。所谓单线程就是一次只能执行一个任务，多个任务就要排队，当前面的任务响应时间过长导致卡死时，会影响后面的任务不能执行。
    JS的异步编程，可以很好的改善单线程带来的问题，它使每一个任务有一个或多个回调函数（callback），当前一个任务结束后，
@@ -22,7 +22,7 @@
 
 
 # 代码题
-## 改写 setTimeout嵌套
+## 一、改写 setTimeout嵌套
 ```c
 function p (str) {
     return new Promise((resolve, reject) => {
@@ -104,7 +104,7 @@ let ex4 = function (n) {
 ex4(null)
 
 
-# 四、手写实现 Promise 源码
+## 四、手写实现 Promise 源码
 ```c
 // 定义promise的三种状态
 const PENDING = 'pending'; // 等待
