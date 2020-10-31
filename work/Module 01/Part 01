@@ -14,10 +14,10 @@ function p (str) {
 }
 
 p('hello ').then(value => p(value + 'lagou '))
-           .then(value => p(value + 'I love you'))
+           .then(value => p(value + 'I ❤ U'))
            .then(value => console.log(value))
 
-##
+## 四个练习
 
 # 手写实现 Promise 源码
 
