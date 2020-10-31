@@ -71,20 +71,25 @@ sanitizeNames(["Hello World"]) // ["hello_world"]
 # 三、四个Functor练习
 
 ### 1.
+```c
 let maybe = Maybe.of([5, 6, 1])
 let ex1 = (num) => {
     return maybe.map(x => fp.map(value => fp.add(value, num), x))
 } 
 ex1(2)
+```
 
 ### 2.
+```c
 let xs = Container.of(['do', 'ray', 'me', 'fa', 'so', 'la', 'ti', 'do'])
 let ex2 = () => {
     return xs.map(x => fp.first(x))
 }
 ex2()
+```
 
 ### 3.
+```c
 let safeProp = fp.curry(function (x, o) {
     return Maybe.of(o[x])
 }) 
@@ -93,8 +98,10 @@ let ex3 = () => {
     return safeProp('name', user).map(x => fp.first(x))
 }
 ex3()
+```
 
 ### 4.
+```c
 let ex4 = function (n) {
     // if (n) {
     //     return parseInt(n)
@@ -102,6 +109,7 @@ let ex4 = function (n) {
     return Maybe.of(n).map(x => parseInt(n))
 }
 ex4(null)
+```
 
 
 ## 四、手写实现 Promise 源码
