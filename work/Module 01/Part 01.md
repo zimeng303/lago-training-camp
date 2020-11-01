@@ -63,9 +63,9 @@ averageDollarValue(cars)
 ### 4.
 ```c
 let sanitizeNames = function (cars) {
-    return fp.flowRight(_underscore, fp.map(fp.toLower))(cars)
+     return fp.flowRight(fp.map(_underscore), fp.map(fp.toLower), fp.map(car => car.name))(cars)
 }
-sanitizeNames(["Hello World"]) // ["hello_world"]
+sanitizeNames(cars) 
 ```
 
 # 三、四个Functor练习
