@@ -82,10 +82,10 @@ ex1(2)
 ### 2.
 ```c
 let xs = Container.of(['do', 'ray', 'me', 'fa', 'so', 'la', 'ti', 'do'])
-let ex2 = () => {
+let ex2 = (xs) => {
     return xs.map(x => fp.first(x))
 }
-ex2()
+ex2(xs)
 ```
 
 ### 3.
@@ -94,10 +94,10 @@ let safeProp = fp.curry(function (x, o) {
     return Maybe.of(o[x])
 }) 
 let user = { id: 2, name: 'Albert' }
-let ex3 = () => {
+let ex3 = (user) => {
     return safeProp('name', user).map(x => fp.first(x))
 }
-ex3()
+ex3(user)
 ```
 
 ### 4.
