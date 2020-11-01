@@ -44,28 +44,28 @@ p('hello ').then(value => p(value + 'lagou '))
 let isLastInStock = function (cars) {
     return fp.flowRight(fp.prop('in_stock'), fp.last)(cars)
 }
-isLastInStock(cars)
+console.log(isLastInStock(cars))
 ```
 ### 2.
 ```c
 let getFirstInName = function (cars) {
     return fp.flowRight(fp.prop('name'), fp.first)(cars)
 }
-getFirstInName(cars)
+console.log(getFirstInName(cars))
 ```
 ### 3.
 ```c
 let averageDollarValue = function (cars) {
     return fp.flowRight(_average, fp.map('dollar_value'))(cars)
 }
-averageDollarValue(cars)
+console.log(averageDollarValue(cars))
 ```
 ### 4.
 ```c
 let sanitizeNames = function (cars) {
      return fp.flowRight(fp.map(_underscore), fp.map(fp.toLower), fp.map(car => car.name))(cars)
 }
-sanitizeNames(cars) 
+console.log(sanitizeNames(cars))
 ```
 
 # 三、四个Functor练习
@@ -76,7 +76,7 @@ let maybe = Maybe.of([5, 6, 1])
 let ex1 = (num) => {
     return maybe.map(x => fp.map(value => fp.add(value, num), x))
 } 
-ex1(2)
+console.log(ex1(2))
 ```
 
 ### 2.
@@ -85,7 +85,7 @@ let xs = Container.of(['do', 'ray', 'me', 'fa', 'so', 'la', 'ti', 'do'])
 let ex2 = (xs) => {
     return xs.map(x => fp.first(x))
 }
-ex2(xs)
+console.log(ex2(xs))
 ```
 
 ### 3.
@@ -97,7 +97,7 @@ let user = { id: 2, name: 'Albert' }
 let ex3 = (user) => {
     return safeProp('name', user).map(x => fp.first(x))
 }
-ex3(user)
+console.log(ex3(user))
 ```
 
 ### 4.
@@ -108,7 +108,7 @@ let ex4 = function (n) {
     // }
     return Maybe.of(n).map(x => parseInt(n))
 }
-ex4(null)
+console.log(ex4(null))
 ```
 
 
