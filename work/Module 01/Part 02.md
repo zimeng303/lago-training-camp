@@ -28,4 +28,29 @@ console.log(min)
 
 四、
 
+五、
+
+var a = 10
+var obj = {
+    a: 20,
+    fn () {
+        setTimeout(() => {
+            console.log(this.a); 
+        })
+    }
+}
+obj.fn()
+
+打印结果：20
+
+原因：obj.fn() 调用的是obj对象中的fn方法，那么根据谁调用this指向谁，此时fn方法中的this指向obj对象。而在定时器中，使用的是箭头函数的写法，而箭头函数是不改变this的指向的，所以定时器里面的this.a其实就是指的obj.a，因此打印出来的结果是 20。
+如果将定时器中的回调函数改成普通函数的写法，那么此时定时器内部的this应该指向window，打印的应该是window.a，也就是全局中使用var声明的变量a，即打印出10。
+
+六、
+
+
+
+
+
+
 
