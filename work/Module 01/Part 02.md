@@ -81,17 +81,20 @@ TypeScript 是由微软开发的一种开源、跨平台的编程语言，是Jav
 **TypeScript的优势** 
 
 **TypeScript 增加了代码的可读性和可维护性** 
+
 a. 类型系统可以方便用户快速的使用类型定义过后的函数变量；
 b. 在编译阶段发现错误，节省了运行之后出错的维护时间；
 c. 增强了编辑器和 IDE 的功能，包括代码补全、接口提示、跳转到定义、重构等。
 
 **TypeScript 非常包容** 
+
 a. TypeScript 是 JavaScript 的超集，.js 文件可以直接重命名为 .ts 即可；
 b. 可以根据变量的值等进行类型推论，可以定义从简单到复杂的几乎一切类型；
 c. TypeScript 编译报错，不会影响生成 JavaScript 文件;
 d. 兼容第三方库，即使第三方库不是用 TypeScript 写的，也可以编写单独的类型文件供 TypeScript 读取。
 
 **TypeScript 拥有活跃的社区** 
+
 a. 大部分第三方库都有提供给 TypeScript 的类型定义文件;
 b. Google 开发的 Angular2 就是使用 TypeScript 编写的；
 c. TypeScript 拥抱了 ES6 规范，也支持部分 ESNext 草案的规范。
