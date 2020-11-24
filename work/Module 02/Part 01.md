@@ -22,6 +22,8 @@
     3）项目更新同步方便，只需要更新代码库中项目模板，即可下载最新的项目。
 </p>
 
+详情参见：[https://blog.csdn.net/zimeng303/article/details/110037847](https://blog.csdn.net/zimeng303/article/details/110037847)
+
 
 # 编程题
 ## 1、概述脚手架实现的过程，并使用 NodeJS 完成一个自定义的小型脚手架工具
@@ -47,3 +49,5 @@
 
 ## 2、尝试使用 Gulp 完成项目的自动化构建
 代码：[https://gitee.com/zimeng303/lago-training-camp/tree/master/work/Module%2002/pages-boilerplate](https://gitee.com/zimeng303/lago-training-camp/tree/master/work/Module%2002/pages-boilerplate)
+
+详情参见：[https://blog.csdn.net/zimeng303/article/details/110038351](https://blog.csdn.net/zimeng303/article/details/110038351)
