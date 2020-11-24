@@ -38,7 +38,8 @@
     
     6）生成你所需要的项目结构；
 </p>
-脚手架代码：[https://gitee.com/zimeng303/lago-training-camp/tree/master/work/Module%2002/generator-alisone-react](https://gitee.com/zimeng303/lago-training-camp/tree/master/work/Module%2002/generator-alisone-react)
+脚手架代码：
+[https://gitee.com/zimeng303/lago-training-camp/tree/master/work/Module%2002/generator-alisone-react](https://gitee.com/zimeng303/lago-training-camp/tree/master/work/Module%2002/generator-alisone-react)
 已发布
 
 ## 2、尝试使用 Gulp 完成项目的自动化构建
