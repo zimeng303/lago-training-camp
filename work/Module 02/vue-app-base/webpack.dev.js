@@ -8,6 +8,7 @@ const common = require('./webpack.common')
 
 module.exports = merge(common, {
     mode: 'development',
+    devtool: 'cheap-module-eval-source-map',
     devServer: {
         port: '8080',    // 设置端口号
         open: true,    // 启动服务，自动开启浏览器
