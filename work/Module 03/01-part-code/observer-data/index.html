@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="el">
+        <div>{{ dog.name }}</div>
+        <div v-html="spanHtml"></div>
+        <button v-on:click="clickHandler">点击</button>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el: '#el',
+            data: {
+                o: 'object',
+                dog: {},
+                spanHtml: '<span>aaaa</span>'
+            },
+            methods: {
+                clickHandler() {
+                    // 该 name 属性是否是响应式的
+                    // this.dog.name = 'Trump'
+                    this.$set(this.dog, 'name', 'Trump')
+                    console.log(this);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
