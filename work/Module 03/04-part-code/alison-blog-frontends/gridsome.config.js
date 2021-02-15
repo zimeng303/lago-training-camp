@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Logo',
-  siteUrl: '/imgs/logo.svg',
+  siteUrl: `${process.env.GRIDSOME_API_URL}/imgs/logo.svg`,
   plugins: [
     {
       use: '@gridsome/source-strapi',
